@@ -52,8 +52,9 @@ public class Conta {
         this.status= status;
     }
 
-    public void abrirConta(String tipo){
+    public void abrirConta(String tipo, String nome){
         setTipo(tipo);
+        setNome(nome);
         setStatus(true);
 
         if (getTipo() == "CC") {
@@ -70,7 +71,7 @@ public class Conta {
             System.out.println("Saque todo seu dinheiro para fechar a conta!");
         }else if (getSaldo()==0) {
             setStatus(false);
-            System.out.println("Conta fechada");
+            System.out.println("Conta de "+getNome() + "fechada");
         }else{
             System.out.println("Pague seus debitos para fechar a conta!");
         }
