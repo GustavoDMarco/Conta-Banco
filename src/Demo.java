@@ -2,11 +2,13 @@ public class Demo{
     public static void main (String[] args){
        
         Conta c1 = new Conta();
+        c1.pagarMensal();
         c1.abrirConta("CP","Gustavo");
         c1.depositar(500);
+        c1.pagarMensal();
         c1.fecharConta();
         c1.sacar(650);
+        c1.sacar(630);
         c1.fecharConta();
-        c1.depositar(50);
     }
 }

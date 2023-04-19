@@ -59,10 +59,10 @@ public class Conta {
 
         if (getTipo() == "CC") {
             setSaldo(50);
-            System.out.println("Conta Corrente aberta!");
+            System.out.println("Conta Corrente de " +getNome() + " aberta!");
         }else if (getTipo() == "CP" || getTipo() == "cp") {
             setSaldo(150);
-            System.out.println("Conta PP aberta!");
+            System.out.println("Conta Poupança de " +getNome() + " aberta!");
         }
     }
 
@@ -71,7 +71,7 @@ public class Conta {
             System.out.println("Saque todo seu dinheiro para fechar a conta!");
         }else if (getSaldo()==0) {
             setStatus(false);
-            System.out.println("Conta de "+getNome() + "fechada");
+            System.out.println("Conta de "+getNome() + " fechada");
         }else{
             System.out.println("Pague seus debitos para fechar a conta!");
         }
@@ -92,10 +92,10 @@ public class Conta {
         if (getStatus()==true) {
 
             if (getSaldo()<valor) {
-                System.out.println("Valor indisponivel");
+                System.out.println("Valor indisponivel. Seu Saldo atual é: "+getSaldo());
             }else{
                 setSaldo(getSaldo()-valor);
-                System.out.println(getSaldo());
+                System.out.println("Saldo atual: "+getSaldo());
             }
 
         }else{
@@ -108,13 +108,13 @@ public class Conta {
 
             if (getTipo() == "cc" || getTipo()== "CC") {
                 setSaldo(getSaldo()-12);
-                System.out.println(getSaldo());
+                System.out.println("Mensalidade paga. Saldo atual: "+getSaldo());
             } else if(getTipo() == "cp" || getTipo()== "CP"){
                 setSaldo(getSaldo()-20);
-                System.out.println(getSaldo());
+                System.out.println("Mensalidade paga. Saldo atual: "+getSaldo());
             }
         }else{
-            System.out.println("A conta está fechada.");
+            System.out.println("A conta não está aberta.");
         }
     }
 
