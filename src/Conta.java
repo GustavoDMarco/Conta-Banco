@@ -92,7 +92,7 @@ public class Conta {
         if (getStatus()==true) {
 
             if (getSaldo()<valor) {
-                System.out.println("Valor indisponivel. Seu Saldo atual é: "+getSaldo());
+                System.out.println("Valor de saque indisponivel. Seu Saldo atual é: "+getSaldo());
             }else{
                 setSaldo(getSaldo()-valor);
                 System.out.println("Saldo atual: "+getSaldo());
