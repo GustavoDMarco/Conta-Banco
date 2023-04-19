@@ -87,6 +87,7 @@ public class Conta {
     }
 
     public void sacar(float valor){
+
         if (getStatus()==true) {
 
             if (getSaldo()<valor) {
@@ -95,7 +96,7 @@ public class Conta {
                 setSaldo(getSaldo()-valor);
                 System.out.println(getSaldo());
             }
-
+            
         }else{
             System.out.println("Abra sua conta antes de sacar!");
         }
@@ -105,9 +106,9 @@ public class Conta {
         if (getStatus()==true) {
 
             if (getTipo() == "cc" || getTipo()== "CC") {
-                setSaldo(getSaldo()-3000);
+                setSaldo(getSaldo()-12);
                 System.out.println(getSaldo());
-            } else{
+            } else if(getTipo() == "cp" || getTipo()== "CP"){
                 setSaldo(getSaldo()-20);
                 System.out.println(getSaldo());
             }
