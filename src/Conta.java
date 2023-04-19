@@ -96,7 +96,7 @@ public class Conta {
                 setSaldo(getSaldo()-valor);
                 System.out.println(getSaldo());
             }
-            
+
         }else{
             System.out.println("Abra sua conta antes de sacar!");
         }
@@ -112,6 +112,8 @@ public class Conta {
                 setSaldo(getSaldo()-20);
                 System.out.println(getSaldo());
             }
+        }else{
+            System.out.println("A conta está fechada.");
         }
     }
 
